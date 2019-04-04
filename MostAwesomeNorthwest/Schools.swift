@@ -40,6 +40,8 @@ class School {
 
 class Schools {
     
+    var selectedSchool:School?
+    
     private init() {}
     
     static var shared = Schools()

@@ -11,6 +11,11 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    let APP_ID = "BDC543E8-824F-D726-FF4A-6E337B1D9600"
+    let API_KEY = "12F83F53-71E4-E41C-FFBC-FBFF1A55FA00"
+    
+    var backendless = Backendless.sharedInstance()
+    
     var window: UIWindow?
 
 

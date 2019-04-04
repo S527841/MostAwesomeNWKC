@@ -18,6 +18,7 @@
 		04CF88B7223B060800FECC21 /* NewTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CF88B6223B060800FECC21 /* NewTeamViewController.swift */; };
 		04E6AA4E223B17CF00B5BB4D /* SchoolsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6AA4D223B17CF00B5BB4D /* SchoolsTableViewController.swift */; };
 		04E6AA50223B17EA00B5BB4D /* TeamsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E6AA4F223B17EA00B5BB4D /* TeamsTableViewController.swift */; };
+		522C4334E4904A1FDDA031B2 /* Pods_MostAwesomeNorthwest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 294D79FE25AAF50AAB46E861 /* Pods_MostAwesomeNorthwest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,9 @@
 		04CF88B6223B060800FECC21 /* NewTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTeamViewController.swift; sourceTree = "<group>"; };
 		04E6AA4D223B17CF00B5BB4D /* SchoolsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsTableViewController.swift; sourceTree = "<group>"; };
 		04E6AA4F223B17EA00B5BB4D /* TeamsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableViewController.swift; sourceTree = "<group>"; };
+		294D79FE25AAF50AAB46E861 /* Pods_MostAwesomeNorthwest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MostAwesomeNorthwest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51B4398794F41027A528D34D /* Pods-MostAwesomeNorthwest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MostAwesomeNorthwest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MostAwesomeNorthwest/Pods-MostAwesomeNorthwest.debug.xcconfig"; sourceTree = "<group>"; };
+		FC07F5C9B2F98030DE8D14E0 /* Pods-MostAwesomeNorthwest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MostAwesomeNorthwest.release.xcconfig"; path = "Pods/Target Support Files/Pods-MostAwesomeNorthwest/Pods-MostAwesomeNorthwest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				522C4334E4904A1FDDA031B2 /* Pods_MostAwesomeNorthwest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +57,8 @@
 			children = (
 				04CF8897223AF23600FECC21 /* MostAwesomeNorthwest */,
 				04CF8896223AF23600FECC21 /* Products */,
+				A9B39056755AD94C1E65CA66 /* Pods */,
+				6E20FFA2C0AC4C73F3581675 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +89,23 @@
 			path = MostAwesomeNorthwest;
 			sourceTree = "<group>";
 		};
+		6E20FFA2C0AC4C73F3581675 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				294D79FE25AAF50AAB46E861 /* Pods_MostAwesomeNorthwest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A9B39056755AD94C1E65CA66 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				51B4398794F41027A528D34D /* Pods-MostAwesomeNorthwest.debug.xcconfig */,
+				FC07F5C9B2F98030DE8D14E0 /* Pods-MostAwesomeNorthwest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,9 +113,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04CF88A7223AF23700FECC21 /* Build configuration list for PBXNativeTarget "MostAwesomeNorthwest" */;
 			buildPhases = (
+				FB0B7539003445F8EB44FCA7 /* [CP] Check Pods Manifest.lock */,
 				04CF8891223AF23600FECC21 /* Sources */,
 				04CF8892223AF23600FECC21 /* Frameworks */,
 				04CF8893223AF23600FECC21 /* Resources */,
+				3E66EE629B290011A7CFDF5B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -147,6 +173,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3E66EE629B290011A7CFDF5B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MostAwesomeNorthwest/Pods-MostAwesomeNorthwest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MostAwesomeNorthwest/Pods-MostAwesomeNorthwest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB0B7539003445F8EB44FCA7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MostAwesomeNorthwest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		04CF8891223AF23600FECC21 /* Sources */ = {
@@ -304,16 +379,20 @@
 		};
 		04CF88A8223AF23700FECC21 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51B4398794F41027A528D34D /* Pods-MostAwesomeNorthwest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MostAwesomeNorthwest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.nwmissouri.MostAwesomeNorthwest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pods/Backendless/SDK/ios/backendless/include/Backendless-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -321,16 +400,20 @@
 		};
 		04CF88A9223AF23700FECC21 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC07F5C9B2F98030DE8D14E0 /* Pods-MostAwesomeNorthwest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MostAwesomeNorthwest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.nwmissouri.MostAwesomeNorthwest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pods/Backendless/SDK/ios/backendless/include/Backendless-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
