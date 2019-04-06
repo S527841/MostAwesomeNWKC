@@ -12,6 +12,9 @@ class TeamsTableViewController: UITableViewController {
 
     var school: School!
     
+    // create a local reference array containing all the Teams
+    var teamArray:[Team]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = school.name
@@ -22,20 +25,24 @@ class TeamsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return school.teams.count
+        return teamArray?.count ?? 0 
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "teamCell", for: indexPath)
-        cell.textLabel?.text = school.teams[indexPath.row].name
+        cell.textLabel?.text = teamArray![indexPath.row].name
         return cell
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
         if (editingStyle == UITableViewCell.EditingStyle.delete) {
-            school.teams.remove(at: indexPath.row)
-            tableView.reloadData()
+            
+            // calls background thread to undertake the model's task
+           DispatchQueue.global(qos: .userInteractive).async {
+                self.school.teams.remove(at: indexPath.row)
+            }
         }
     }
     
